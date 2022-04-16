@@ -36,7 +36,7 @@ const Sidebar = (props) => {
                 )}
             >
                 <a
-                    href="javascript:void(0)"
+                    href="#!"
                     className="closebtn hidex"
                     onClick={() => ontoggleNav("0px")}
                 >
@@ -47,13 +47,13 @@ const Sidebar = (props) => {
                 </div>
                 {
                         <div className={"pt-5 mt-5"}>
-                            <a href="javascript:void(0)">Persona <hr/></a>
-                            <a href="javascript:void(0)" onClick={() =>  { history.push('/Blog')}}>Blog</a>
-                            <a href="javascript:void(0)" className="pt-4" onClick={() =>  { history.push('/Admired')}}>Admired</a>
-                            <a href="javascript:void(0)" className="pt-4" onClick={() =>  { history.push('/Niche')}}>Niche</a>
-                            <a href="javascript:void(0)" className="pt-4" onClick={() =>  { history.push('/Talkathon')}}>Talkathon</a>
-                            <a href="javascript:void(0)" className="pt-4" onClick={() =>  { history.push('/Contour')}}>Contour</a>
-                            <a href="javascript:void(0)" style={{position: 'absolute', bottom: '8%'}} onClick={onLogOut}>Logout</a>
+                            <a href="#!">Persona <hr/></a>
+                            <a href="#!" onClick={() =>  { history.push('/Blog')}}>Blog</a>
+                            <a href="#!" className="pt-4" onClick={() =>  { history.push('/Admired')}}>Admired</a>
+                            <a href="#!" className="pt-4" onClick={() =>  { history.push('/Niche')}}>Niche</a>
+                            <a href="#!" className="pt-4" onClick={() =>  { history.push('/Talkathon')}}>Talkathon</a>
+                            <a href="#!" className="pt-4" onClick={() =>  { history.push('/Contour')}}>Contour</a>
+                            <a href="#!" style={{position: 'absolute', bottom: '8%'}} onClick={onLogOut}>Logout</a>
                         </div>
                 }
             </div>
@@ -65,6 +65,7 @@ const Sidebar = (props) => {
                     {mainExpand: !open},
                     {noscroll: mobile && open}
                 )}
+                style={{paddingLeft: '3%'}}
             >
                 {props.children}
             </div>
