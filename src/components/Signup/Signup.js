@@ -1,14 +1,15 @@
-import {Card, Container} from "reactstrap";
+import {Card, Container} from 'react-bootstrap'
+import {useHistory} from "react-router";
 
 const Signup=()=>{
+    const history = useHistory();
     return (
         <>
-            <Container className= "w-auto float-end">
+            <Container className= "w-80">
                 <Card>
-                    <Card.Header><h2 className="text-center mb-2 mt-2">!</h2></Card.Header>
                     <Card.Body className="p-3">
                         <div className="form">
-                            <form>
+                            <form onSubmit={() => {history.push('/Blog')}}>
                                 <div className="input-container align-items-center justify-content-center">
                                     <label>Username </label>
                                     <input type="text" name="uname" required />
