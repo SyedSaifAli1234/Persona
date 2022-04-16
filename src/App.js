@@ -10,17 +10,17 @@ import Contour from "./components/Contour/Contour";
 function App() {
   return (
       <>
-          <Sidebar>
-              <Switch>
+          <Switch>
+              <Route exact path="/"> <Signup/> </Route>
+              <Sidebar>
                   <Route path="/Blog"> <Blog/> </Route>
                   <Route path="/Admired"> <Admired/> </Route>
                   <Route path="/Niche"> <Niche/> </Route>
                   <Route path="/Talkathon"> <Talkathon/> </Route>
                   <Route path="/Contour"> <Contour/> </Route>
-                  <Route exact path="/"> <Signup/> </Route>
-                  <Redirect to="/"/>
-              </Switch>
-          </Sidebar>
+              </Sidebar>
+              <Redirect to="/"/>
+          </Switch>
       </>
   );
 }
